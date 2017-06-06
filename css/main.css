@@ -4,48 +4,23 @@
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */
-/* Font size guide is here. Please do not add more sizes unless it is extremely necessary */
-.font-xxs {
-  font-size: 10px; }
-
-.font-xs {
-  font-size: 13px; }
-
-.font-s {
-  font-size: 16px; }
-
-.font-m {
-  font-size: 18px; }
-
-.font-l {
-  font-size: 32px; }
-
-.font-xl {
-  font-size: 40px; }
-
-.font-xxl {
-  font-size: 64px; }
-
-/* Font color guide is here. */
-.font-black {
-  color: #1F2D3D; }
-
-.font-steelgrey {
-  color: #8492a6; }
-
-/* Font weight is here. */
-.font-light {
-  font-weight: 300; }
-
-.font-regular {
-  font-weight: 400; }
-
-.font-bold {
-  font-weight: 700; }
-
 /* z-index */
 .z-index-1 {
   z-index: 1; }
+
+.text-decoration-none {
+  text-decoration: none; }
+
+.card-box-shadow {
+  -webkit-box-shadow: 6px 6px 22px -9px #8a838a;
+  -moz-box-shadow: 6px 6px 22px -9px #8a838a;
+  box-shadow: 6px 6px 22px -9px #8a838a; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
 
 /* font sizes, font-weights, colors, media query breakpoints, */
 /* This creates custom margin classes based on the values added. Eg. .mt-24 is margin-top: 24px */
@@ -379,6 +354,104 @@
   height: 50px; }
 
 /* styles for primary and secondary navbar */
+/* Color Themes - Variables */
+/* Common Colors - Variables */
+/* Mixins */
+/* Button Global */
+.btn {
+  display: inline-block;
+  margin: 8px;
+  border: .094em solid;
+  border-radius: .400em;
+  box-shadow: 0 0.375em 0.313em -0.313em rgba(0, 0, 0, 0.8), inset 0 0.063em #fafafa, inset 0 -0.188em rgba(0, 0, 0, 0.15);
+  color: #FFF;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  text-shadow: 0 0.063em rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+
+.btn-l {
+  padding: .938em 1.875em; }
+
+/* Themes */
+.dark-blue {
+  border-color: #222c59;
+  background-color: #3E50A3; }
+  .dark-blue:hover {
+    background-color: #36458d;
+    box-shadow: 0 0.125em #fafafa, inset 0 0.063em #fafafa, inset 0 -0.188em #4154aa;
+    color: #fafafa; }
+  .dark-blue:active {
+    box-shadow: 0 0.063em #fafafa, inset 0 0 1.094em #06070f, inset 0 0.063em #222c59, inset 0 -0.188em #222c59; }
+
+.orange {
+  border-color: #97360d;
+  background-color: #eb5b1f; }
+  .orange:hover {
+    background-color: #d84d13;
+    box-shadow: 0 0.125em #fafafa, inset 0 0.063em #fafafa, inset 0 -0.188em #ec6228;
+    color: #fafafa; }
+  .orange:active {
+    box-shadow: 0 0.063em #fafafa, inset 0 0 1.094em #391405, inset 0 0.063em #97360d, inset 0 -0.188em #97360d; }
+
+/* styles for buttons should be here  */
+.bg-hg-orange {
+  background-color: #eb5b1f;
+  /* The one and only hasgeek orange */ }
+
+.off-white {
+  background-color: #fAfAfA; }
+
+/*  */
+/* No more font size variants please. */
+.font-xxs {
+  font-size: 10px; }
+
+.font-xs {
+  font-size: 13px; }
+
+.font-s {
+  font-size: 16px; }
+
+.font-m {
+  font-size: 18px; }
+
+.font-l {
+  font-size: 32px; }
+
+.font-xl {
+  font-size: 40px; }
+
+.font-xxl {
+  font-size: 64px; }
+
+/* Font color guide is here. */
+.font-black {
+  color: #1F2D3D; }
+
+.font-steelgrey {
+  color: #8492a6; }
+
+.font-white {
+  color: #ffffff; }
+
+.font-off-white {
+  color: #fAfAfA; }
+
+/* Font weight is here. */
+.font-light {
+  font-weight: 300; }
+
+.font-regular {
+  font-weight: 400; }
+
+.font-bold {
+  font-weight: 700; }
+
+/*  */
 /* This partial is for styles that are unique to the main rootconf page. When creating a partial unique to a page add a unique class to the body in the html of that page eg. <body class="rootconf-main">. Nest your scss in this class. Eg.
 .rootconf-main{
     p{
@@ -393,6 +466,10 @@ This prevents classes from overriding each other in main.css and creating chaos 
   background-color: #f6f9fc;
   width: auto;
   height: 400px; }
+.rootconf-main .event-shoutout-position {
+  position: relative;
+  top: -100px;
+  background: #ffffff; }
 
 /* styles pertaining to the rootconf main page only */
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Mobilecon</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/animate.css">
@@ -72,18 +73,19 @@
 
 <section class="event-shoutout">
   <div class="container">
-    <div class="row">
+    <div class="row card-box-shadow event-shoutout-position">
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-6">
-
+          <div class="col-md-6 col-sm-6 pl-0 pr-0">
+            <img src="http://via.placeholder.com/400x350" alt="" class="img-responsive">
           </div>
-          <div class="col-md-6 mt-32">
+          <div class="col-md-6 col-sm-6 mt-32">
             <p class="text-uppercase font-steelgrey">
               Tickets now available for 2018 Conference
             </p>
             <h3 class="font-xl">rootconf 2018</h3>
             <p class="font-s">This year's theme is service reliability. You will hear case studies of how organizations and teams plan, monitor and automate their infrastructure to ensure continous reliabilty and availability of services.</p>
+            <button class="mt-20 orange btn btn-l  font-m" role="button">rootconf 2018 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -91,24 +93,41 @@
   </div>
 </section>
 
+<section class="about-community">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-24">A growing community for DevOps</h2>
+                <p class="font-s">Conferences bring like-minded people under one umbrella. Insights bind participants and produce the sentiment of community. Our goal is to facilitate conversations and sharing of experiences that eventually lead to friendships which, in turn, foster community.</p>
+                <p class="font-s">Rootconf is an ongoing programme:<br>Join the #Rootconf community on Slack. Participate in the online (Ask Me Anything) AMA sessions. Contribute articles to the Rootconf blog. Propose topics for meetups. Speak at Rootconf meetups round the year. If you work on payments, participate in the DevOps and Payments conference in Mumbai, on July 8. Join our mailing list.</p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <h4 class="text-uppercase font-steelgrey mt-24">Join us online</h4>
+                <p class="font-s">We run a community Slack team where we have AMAs and discussions. You can also subscribe to our mailing list for updates.</p>
+                <p class="font-s"><i class="fa fa-slack" aria-hidden="true"></i> Join the #rootconf community on slack</p>
+                <p class="font-s"><i class="fa fa-envelope" aria-hidden="true"></i> Join the mailing list</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script>
 /*Makes secondary navbar sticky after scrolling 52px*/
-$(window).scroll(function() {
+/*$(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 52) {
-        //clearHeader, not clearheader - caps H
         $("#body").addClass("navbar-fixed-top");
     }else {
         $("#body").removeClass("navbar-fixed-top");
     }
-});
+});*/
 /*........*/
 
 /*Makes secondary navbar fixed to bottom in small devices*/
-function checkWidth() {
+/*function checkWidth() {
     if ($(window).width() < 900) {
         $('#body').addClass('navbar-fixed-bottom');
     } else {
@@ -118,7 +137,7 @@ function checkWidth() {
     }
 }
 
-$(window).resize(checkWidth);
+$(window).resize(checkWidth);*/
 </script>
 
 </body>

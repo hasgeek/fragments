@@ -15,4 +15,9 @@ This prevents classes from overriding each other in main.css and creating chaos 
     width: auto;
     height: 400px;
 }
+    .event-shoutout-position{
+    position: relative;
+    top: -100px;
+    background: #ffffff;
+    }
 }
