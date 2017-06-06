@@ -1,0 +1,74 @@
+/* Media query breakpoints */
+    /* Custom, iPhone Retina */
+    $break-xxs: 320px;
+
+    /* Extra Small Devices, Phones */
+    $break-xs: 480px;
+
+    /* Small Devices, Tablets */
+    $break-s: 768px;
+
+    /* Medium Devices, Desktops */
+    $break-m: 992px;
+
+    /* Large Devices, Wide Screens */
+    $break-l: 1200px;
+
+
+/* Font size guide is here. Please do not add more sizes unless it is extremely necessary */
+.font-xxs{
+    font-size: 10px;
+}
+
+.font-xs{
+    font-size: 13px;
+}
+
+.font-s{
+    font-size: 16px;
+}
+
+.font-m{
+    font-size: 18px;
+}
+
+.font-l{
+    font-size: 32px;
+}
+
+.font-xl{
+    font-size: 40px;
+}
+
+.font-xxl{
+    font-size: 64px;
+}
+
+/* Font color guide is here. */
+.font-black{
+    color: #1F2D3D;
+}
+
+.font-steelgrey{
+    color: #8492a6;
+}
+
+/* Font weight is here. */
+.font-light{
+    font-weight: 300;
+}
+
+.font-regular{
+    font-weight: 400;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+/* z-index */
+.z-index-1{
+    z-index: 1;
+}
+
+

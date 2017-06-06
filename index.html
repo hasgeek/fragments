@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobilecon</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+<body class="rootconf-main font-black">
+<!-- Primary Navbar -->
+<section class="navbar mb-0">
+  <div class="container-fluid pl-0 pr-0">
+    <div class="primary-navbar">
+      <ul>
+        <li><a href="" class="gradient"><strong>Rootconf</strong></a></li>
+        <li><a href="">2018 Conference</a></li>
+        <!-- <li class="pull-right"><a href="https://hasgeek.com/">HasGeek</a></li> -->
+      </ul>
+    </div>
+</div>
+</section>
+
+<!-- /.Primary Navbar -->
+
+<!-- Secondary Navbar -->
+<section class="secondary-navbar secondary-nav-fixed-height" id="secondary-nav-wrapper">
+  <nav class="navbar navbar-default mb-0 z-index-1" id="body">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://imgee.s3.amazonaws.com/imgee/769dc463009d4cf09be7352c8c7b3628.png" alt="" width="50px;"></a>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Become a Speaker</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Become a Sponsor</a></li>
+        <li><a href="#">Photos & Videos</a></li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+<!--/.Secondary Navbar -->
+
+<section class="masthead">
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="font-xxl mt-72 mb-32"><img src="https://imgee.s3.amazonaws.com/imgee/769dc463009d4cf09be7352c8c7b3628.png" alt="" width="80px;" class="animated bounceInDown">rootconf</h1>
+        <h2 class="font-m">Conference & Workshops on DevOps and Cloud Infrastructure</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-shoutout">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-6">
+
+          </div>
+          <div class="col-md-6 mt-32">
+            <p class="text-uppercase font-steelgrey">
+              Tickets now available for 2018 Conference
+            </p>
+            <h3 class="font-xl">rootconf 2018</h3>
+            <p class="font-s">This year's theme is service reliability. You will hear case studies of how organizations and teams plan, monitor and automate their infrastructure to ensure continous reliabilty and availability of services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+/*Makes secondary navbar sticky after scrolling 52px*/
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 52) {
+        //clearHeader, not clearheader - caps H
+        $("#body").addClass("navbar-fixed-top");
+    }else {
+        $("#body").removeClass("navbar-fixed-top");
+    }
+});
+/*........*/
+
+/*Makes secondary navbar fixed to bottom in small devices*/
+function checkWidth() {
+    if ($(window).width() < 900) {
+        $('#body').addClass('navbar-fixed-bottom');
+    } else {
+        $('#body').addClass('navbar-fixed-top');
+        $('#body').removeClass('navbar-fixed-bottom');
+        $('#secondary-nav-wrapper').removeClass('secondary-nav-fixed-height');
+    }
+}
+
+$(window).resize(checkWidth);
+</script>
+
+</body>
+</html>
