@@ -1,3 +1,6 @@
+.p-48 {
+  padding: 48px; }
+
 /* Media query breakpoints */
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
@@ -11,16 +14,56 @@
 .text-decoration-none {
   text-decoration: none; }
 
+.text-decoration-underline {
+  text-decoration: underline; }
+
 .card-box-shadow {
-  -webkit-box-shadow: 6px 6px 22px -9px #8a838a;
-  -moz-box-shadow: 6px 6px 22px -9px #8a838a;
-  box-shadow: 6px 6px 22px -9px #8a838a; }
+  -webkit-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
+  -moz-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
+  border: solid 2px transparent; }
 
 .position-relative {
   position: relative; }
 
 .position-absolute {
   position: absolute; }
+
+.display-inline {
+  display: inline; }
+
+.image-overlay {
+  position: relative;
+  width: 100%; }
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4a4a4a; }
+
+.image-overlay:hover .overlay {
+  opacity: 0.8; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
 
 /* font sizes, font-weights, colors, media query breakpoints, */
 /* This creates custom margin classes based on the values added. Eg. .mt-24 is margin-top: 24px */
