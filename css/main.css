@@ -513,6 +513,10 @@ This prevents classes from overriding each other in main.css and creating chaos 
   position: relative;
   top: -100px;
   background: #ffffff; }
+.rootconf-main .event-column {
+  width: 100%;
+  height: 540px;
+  overflow-y: scroll; }
 
 /* styles pertaining to the rootconf main page only */
 

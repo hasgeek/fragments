@@ -20,4 +20,9 @@ This prevents classes from overriding each other in main.css and creating chaos 
     top: -100px;
     background: #ffffff;
     }
+    .event-column{
+        width: 100%;
+        height: 540px;
+        overflow-y: scroll;
+    }
 }
