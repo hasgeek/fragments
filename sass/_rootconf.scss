@@ -20,9 +20,98 @@ This prevents classes from overriding each other in main.css and creating chaos 
     top: -100px;
     background: #ffffff;
     }
-    .event-column{
-        width: 100%;
-        height: 540px;
-        overflow-y: scroll;
+    .card{
+        @extend .off-white;
+        /* &:hover{
+            @extend .card-box-shadow;
+
+        } */
+    }
+    .meetup{
+        .card-heading{
+            background-color: #0088af;
+            padding: 20px 20px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+    .ama{
+        .card-heading{
+            background-color: #f29c4a;
+            padding: 20px 20px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+    .workshop{
+        .card-heading{
+            background-color: #239C70;
+            padding: 20px 20px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+    .blog{
+        hr{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .panel-heading{
+            padding: 5px 5px 0 5px;
+        }
+        .nav-tabs{
+            border-bottom: none;
+        }
+        .nav-justified{
+        margin-bottom: -1px;
+        }
+    }
+    .nav-tabs{
+    li{
+        a{
+            color: #fff;
+            &:hover{
+                color: #fff;
+            }
+            &:focus{
+                color: #fff;
+            }
+        }
     }
 }
+
+}//
+
+
+.panel-primary{
+    .nav-tabs{
+        a{
+            color: #fff;
+            background-color: #3071a9;
+            border-color: transparent;
+            &:hover{
+                color: #fff;
+                background-color: #3071a9;
+                border-color: transparent;
+             }
+            &:focus{
+                color: #fff;
+                background-color: #3071a9;
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+ .nav-tabs > li.active > a:focus {
+    color: #428bca;
+    background-color: #fff;
+    border-color: #428bca;
+    border-bottom-color: transparent;
+}
+
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+

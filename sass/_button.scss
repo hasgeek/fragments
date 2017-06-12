@@ -12,11 +12,11 @@ $off-wht: #fafafa;
 /* Mixins */
 
 @mixin btn-theme($btn-color) {
-    border-color: darken($btn-color, 20%);
+    border-color: darken($btn-color, 10%);
     background-color: $btn-color;
     &:hover {
         background-color: darken($btn-color, 6%);
-        box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%);
+       /*  box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%); */
         color: $off-wht;
     }
     &:active {
@@ -36,9 +36,9 @@ $off-wht: #fafafa;
 .btn {
     display: inline-block;
     margin: 8px;
-    border: .094em solid;
+    /* border: .094em solid; */
     border-radius: .400em;
-    box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15);
+    /* box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15); */
     color: #FFF;
     @include trans(0.2s ease-in-out);
     text: {
@@ -46,6 +46,10 @@ $off-wht: #fafafa;
         shadow: 0 .063em rgba(black,.3);
     }
   cursor:pointer;
+  &:focus{
+    outline: none;
+    color: #fff;
+  }
 }
 
 .btn-l{

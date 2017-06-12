@@ -17,11 +17,17 @@
 .text-decoration-underline {
   text-decoration: underline; }
 
+.opacity-none {
+  opacity: 0 !important; }
+
+.background-none {
+  background: none !important; }
+
 .card-box-shadow {
   -webkit-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
   -moz-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
-  border: solid 2px transparent; }
+  border: solid 1px transparent; }
 
 .position-relative {
   position: relative; }
@@ -176,7 +182,7 @@
   margin-bottom: 80px; }
 
 .mt-0 {
-  margin-bottom: 0px; }
+  margin-top: 0px; }
 
 .mt-4 {
   margin-top: 4px; }
@@ -404,9 +410,9 @@
 .btn {
   display: inline-block;
   margin: 8px;
-  border: .094em solid;
+  /* border: .094em solid; */
   border-radius: .400em;
-  box-shadow: 0 0.375em 0.313em -0.313em rgba(0, 0, 0, 0.8), inset 0 0.063em #fafafa, inset 0 -0.188em rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15); */
   color: #FFF;
   -webkit-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -415,27 +421,30 @@
   text-decoration: none;
   text-shadow: 0 0.063em rgba(0, 0, 0, 0.3);
   cursor: pointer; }
+  .btn:focus {
+    outline: none;
+    color: #fff; }
 
 .btn-l {
   padding: .938em 1.875em; }
 
 /* Themes */
 .dark-blue {
-  border-color: #222c59;
+  border-color: #303e7e;
   background-color: #3E50A3; }
   .dark-blue:hover {
     background-color: #36458d;
-    box-shadow: 0 0.125em #fafafa, inset 0 0.063em #fafafa, inset 0 -0.188em #4154aa;
+    /*  box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%); */
     color: #fafafa; }
   .dark-blue:active {
     box-shadow: 0 0.063em #fafafa, inset 0 0 1.094em #06070f, inset 0 0.063em #222c59, inset 0 -0.188em #222c59; }
 
 .orange {
-  border-color: #97360d;
+  border-color: #c54612;
   background-color: #eb5b1f; }
   .orange:hover {
     background-color: #d84d13;
-    box-shadow: 0 0.125em #fafafa, inset 0 0.063em #fafafa, inset 0 -0.188em #ec6228;
+    /*  box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%); */
     color: #fafafa; }
   .orange:active {
     box-shadow: 0 0.063em #fafafa, inset 0 0 1.094em #391405, inset 0 0.063em #97360d, inset 0 -0.188em #97360d; }
@@ -445,7 +454,7 @@
   background-color: #eb5b1f;
   /* The one and only hasgeek orange */ }
 
-.off-white {
+.off-white, .rootconf-main .card {
   background-color: #fAfAfA; }
 
 /*  */
@@ -513,10 +522,65 @@ This prevents classes from overriding each other in main.css and creating chaos 
   position: relative;
   top: -100px;
   background: #ffffff; }
-.rootconf-main .event-column {
-  width: 100%;
-  height: 540px;
-  overflow-y: scroll; }
+.rootconf-main .card {
+        /* &:hover{
+            @extend .card-box-shadow;
+
+        } */ }
+.rootconf-main .meetup .card-heading {
+  background-color: #0088af;
+  padding: 20px 20px;
+  border-radius: 5px 5px 0 0; }
+.rootconf-main .ama .card-heading {
+  background-color: #f29c4a;
+  padding: 20px 20px;
+  border-radius: 5px 5px 0 0; }
+.rootconf-main .workshop .card-heading {
+  background-color: #239C70;
+  padding: 20px 20px;
+  border-radius: 5px 5px 0 0; }
+.rootconf-main .blog hr {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+.rootconf-main .blog .panel-heading {
+  padding: 5px 5px 0 5px; }
+.rootconf-main .blog .nav-tabs {
+  border-bottom: none; }
+.rootconf-main .blog .nav-justified {
+  margin-bottom: -1px; }
+.rootconf-main .nav-tabs li a {
+  color: #fff; }
+  .rootconf-main .nav-tabs li a:hover {
+    color: #fff; }
+  .rootconf-main .nav-tabs li a:focus {
+    color: #fff; }
+
+.panel-primary .nav-tabs a {
+  color: #fff;
+  background-color: #3071a9;
+  border-color: transparent; }
+  .panel-primary .nav-tabs a:hover {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: transparent; }
+  .panel-primary .nav-tabs a:focus {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: transparent; }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #428bca;
+  background-color: #fff;
+  border-color: #428bca;
+  border-bottom-color: transparent; }
+
+.grid-item {
+  width: 200px; }
+
+.grid-item--width2 {
+  width: 400px; }
 
 /* styles pertaining to the rootconf main page only */
 
