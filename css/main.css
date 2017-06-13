@@ -582,6 +582,21 @@ This prevents classes from overriding each other in main.css and creating chaos 
 .grid-item--width2 {
   width: 400px; }
 
+.affix {
+  top: -150px;
+  width: 100%;
+  z-index: 100; }
+
+.nav-wrapper {
+  height: 53px; }
+
+/*   .affix + .container-fluid {
+      padding-top: 70px;
+  }
+ */
+@media only screen and (max-width: 500px) {
+  .attendee-stories .carousel-control {
+    display: none; } }
 /* styles pertaining to the rootconf main page only */
 
 /*# sourceMappingURL=main.css.map */

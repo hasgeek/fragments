@@ -23,12 +23,11 @@
     </div>
 </div>
 </section>
-
 <!-- /.Primary Navbar -->
 
 <!-- Secondary Navbar -->
-<section class="secondary-navbar secondary-nav-fixed-height" id="secondary-nav-wrapper">
-  <nav class="navbar navbar-default mb-0 z-index-1" id="body">
+<section class="secondary-navbar nav-wrapper">
+  <nav class="navbar navbar-default mb-0 z-index-1" id="body" id="navbar-affix" data-spy="affix" data-offset-top="50">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -44,13 +43,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Become a Speaker</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Become a Sponsor</a></li>
-        <li><a href="#">Photos & Videos</a></li>
+        <li class="active"><a href="#overview-section">Overview <span class="sr-only">(current)</span></a></li>
+        <li><a href="#community-section">Community</a></li>
+        <li><a href="#events-section">Events</a></li>
+        <li><a href="#become-speaker-section">Become a Speaker</a></li>
+        <li><a href="#stories-section">Stories</a></li>
+        <li><a href="#sponsor-section">Become a Sponsor</a></li>
+        <li><a href="#archive-section">Photos & Videos</a></li>
       </ul>
       <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
@@ -94,7 +93,7 @@
   </div>
 </section>
 
-<section class="about-community">
+<section class="about-community" id="overview-section">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -111,7 +110,7 @@
         </div>
     </div>
 </section>
-<section class="join-us">
+<section class="join-us" id="community-section">
     <div class="container mt-80">
         <div class="row">
            <div class="col-md-12">
@@ -124,7 +123,7 @@
 <section class="attend-workshop">
     <div class="container mt-80">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" id="events-section">
                 <h2 class="mb-24">Rootconf Events</h2>
                 <div class="row">
                     <!-- <div class="col-md-4 col-xs-12 mb-32">
@@ -223,30 +222,29 @@
 
 <section>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <img src="./img/temporary-img.png" alt="" class="img-responsive">
-            </div>
-        </div>
-        <div class="row mt-80">
-            <div class="col-md-4">
+        <div class="row mb-40">
+            <img src="./img/temporary-img.png" alt="" class="img-responsive">
+         </div>
+        <div class="row mt-80" id="become-speaker-section">
+            <div class="col-md-4 mt-40" >
                 <img src="./img/speaker-icon.svg" alt="" class="img-responsive">
                 <h3>Apply as a speaker</h3>
                 <p class="font-s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget dignissim nulla. Nulla venenatis diam sit amet enim malesuada, vel mattis nulla tincidunt. Sed laoreet tempor urna id ultricies. Nam non porttitor ante, id elementum dolor. </p>
                 <button class="mt-20 orange btn  font-s" role="button">Apply as a speaker <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-40">
                 <img src="./img/volunteer-icon.svg" alt="" class="img-responsive">
                 <h3>Apply as a volunteer</h3>
                 <p class="font-s">Quisque vel massa id turpis efficitur convallis. Nullam vestibulum sodales purus, eget gravida nibh sollicitudin vel. Quisque non eleifend ex. Aliquam dictum vestibulum libero, at rhoncus eros consequat ut. Duis fringilla pellentesque volutpat. Pellentesque vel est lobortis, venenatis augue at, vestibulum elit. Etiam tellus lectus, vestibulum nec fermentum eu, pharetra ut est. Maecenas congue dictum iaculis.</p>
                 <button class="mt-20 orange btn  font-s" role="button">Apply as a volunteer <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-40">
                 <img src="./img/ticket-icon.svg" alt="" class="img-responsive">
                 <h3>Buy Tickets</h3>
                 <p class="font-s">Quisque vel massa id turpis efficitur convallis. Nullam vestibulum sodales purus, eget gravida nibh sollicitudin vel. Quisque non eleifend ex. Aliquam dictum vestibulum libero, at rhoncus eros consequat ut. Duis fringilla pellentesque volutpat. Pellentesque vel est lobortis, venenatis augue at, vestibulum elit. </p>
                 <button class="mt-20 orange btn  font-s" role="button">Buy Tickets <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
             </div>
+
         </div>
     </div>
 </section>
@@ -275,7 +273,7 @@
 
 <section>
     <div class="container">
-        <div class="row mt-80">
+        <div class="row mt-80 attendee-stories" id="stories-section">
              <div id="tcb-testimonial-carousel" class="carousel slide" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
@@ -283,7 +281,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                <figure class="clearfix">
-                                   <div class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive media-object" src="https://organicthemes.com/demo/profile/files/2012/12/profile_img.png"> </div>
+                                   <div class="col-md-4 col-sm-4 col-xs-6"><img class="img-responsive media-object" src="https://organicthemes.com/demo/profile/files/2012/12/profile_img.png"> </div>
                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                         <figcaption class="caption">
                                             <p class="text-uppercase font-steelgrey mt-24"> Stories shared by some of our attendees </p>
@@ -327,55 +325,50 @@
 <section class="">
     <div class="container">
         <div class="row mt-80">
-            <div class="col-md-4">
+            <div class="col-md-4" id="sponsor-section">
                 <h2 class="mb-24">Our Sponsors</h2>
                 <p class="font-s">Our  sponsors are brands who are the best in the industry. We have a range of sponsorship options. Get a stall something something Insights bind participants and produce the sentiment of community. Our goal is to facilitate conversations and sharing of experiences that eventually lead to friendships which, in turn, foster community.</p>
             </div>
             <div class="col-md-8 mt-32">
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                <div class="row">
+                    <div class="col-md-3 col-xs-6 mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-xs-6  mt-16">
+                        <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
+                    </div>
                 </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-3 mt-16">
-                    <img src="http://via.placeholder.com/150x50" alt="" class="img-responsive">
-                </div>
-
             </div>
-            <!-- <div class="col-md-5 col-md-offset-1">
-                <h4 class="text-uppercase font-steelgrey mt-24 mb-32 font-m">Join us online</h4>
-                <p class="font-s">We run a community Slack team where we have AMAs and discussions. You can also subscribe to our mailing list for updates.</p><br>
-                <p class="font-s text-decoration-underline">Join the #rootconf community on slack</p>
-                <p class="font-s text-decoration-underline">Join the mailing list</p>
-            </div> -->
         </div>
     </div>
 </section>
@@ -399,7 +392,7 @@
   </div>
 </section> -->
 
-<section class="archive">
+<section class="archive" id="archive-section">
     <div class="container mt-80">
         <div class="row">
             <div class="col-md-4">
@@ -440,26 +433,24 @@
                                 <a href="">
                                     <h3 class="font-s mt-0">Introduction to rootconf 2017 and what to expect this year</h3>
                                 </a>
-                                    <p class="font-steelgrey">4 hrs ago</p>
+                                 <p class="font-steelgrey">4 hrs ago</p>
                                 <hr>
                                 <a href="">
                                 <h3 class="font-s mt-0">Talk on failure resistant architecture with micro-service dependancies</h3>
                                 </a>
-                                    <p class="font-steelgrey">2 weeks ago</p>
-
+                                 <p class="font-steelgrey">2 weeks ago</p>
                             </div>
                             <div class="tab-pane fade" id="tab2primary">
                                 <a href="">
                                     <h3 class="font-s mt-0">Talk on failure resistant architecture with micro-service dependancies</h3>
                                 </a>
-                                    <p class="font-steelgrey">4 hrs ago</p>
+                                 <p class="font-steelgrey">4 hrs ago</p>
 
                                 <hr>
                                 <a href="">
                                     <h3 class="font-s mt-0">Introduction to rootconf 2017 and what to expect this year</h3>
                                 </a>
-                                    <p class="font-steelgrey">2 weeks ago</p>
-
+                                 <p class="font-steelgrey">2 weeks ago</p>
                             </div>
                         </div>
                     </div>
@@ -478,7 +469,7 @@
                 <p class="font-s">Copyright © 2010-2017</p>
                 <p class="font-s">All rights reserved</p>
             </div>
-            <div class="col-md-3 text-center mt-48">
+            <div class="col-md-3 mt-48 mb-48">
                 <a href=""><p class="display-inline"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 42px; color: #3b5998;"></i></p></a>
                 <a href=""><p class="display-inline ml-24"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size: 42px; color: #55acee;" ></i></p></a>
             </div>
@@ -490,10 +481,19 @@
                     <div class="form-group">
                         <label for="exampleInputEmail2">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        <button type="submit" class="dark-blue btn">Send invitation</button>
                     </div>
-                    <button type="submit" class="dark-blue btn">Send invitation</button>
+
                 </form>
             </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+
         </div>
     </div>
 </section>
@@ -501,30 +501,32 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script>
-/*Makes secondary navbar sticky after scrolling 52px*/
-/*$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 52) {
-        $("#body").addClass("navbar-fixed-top");
-    }else {
-        $("#body").removeClass("navbar-fixed-top");
-    }
-});*/
-/*........*/
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-/*Makes secondary navbar fixed to bottom in small devices*/
-/*function checkWidth() {
-    if ($(window).width() < 900) {
-        $('#body').addClass('navbar-fixed-bottom');
-    } else {
-        $('#body').addClass('navbar-fixed-top');
-        $('#body').removeClass('navbar-fixed-bottom');
-        $('#secondary-nav-wrapper').removeClass('secondary-nav-fixed-height');
-    }
-}
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-$(window).resize(checkWidth);*/
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (700) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - $(".navbar").height()
+      }, 700, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 </script>
+
 
 </body>
 </html>
