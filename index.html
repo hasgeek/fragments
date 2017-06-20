@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fragments</title>
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-horizon.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/animate.css">
-</head>
-<body class="rootconf-main font-black">
+---
+layout: base
+title: 'Fragments'
+---
 <!-- Primary Navbar -->
 <section class="navbar mb-0 ">
   <div class="container-fluid pl-0 pr-0">
     <div class="primary-navbar">
       <ul>
-        <li><a href="" class="gradient"><strong>Rootconf</strong></a></li>
-        <li><a href="">2018 Conference</a></li>
+        <li><a href="/"><strong>Fragments</strong></a></li>
+        <li><a href="/2017">2017 Conference</a></li>
         <!-- <li class="pull-right"><a href="https://hasgeek.com/">HasGeek</a></li> -->
       </ul>
     </div>
@@ -25,67 +16,31 @@
 </section>
 <!-- /.Primary Navbar -->
 
-<!-- Secondary Navbar -->
-<section class="secondary-navbar nav-wrapper">
-  <nav class="navbar navbar-default mb-0 z-index-1" id="body" id="navbar-affix" data-spy="affix" data-offset-top="50">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="https://imgee.s3.amazonaws.com/imgee/769dc463009d4cf09be7352c8c7b3628.png" alt="" width="50px;"></a>
-      </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#overview-section">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="#community-section">Community</a></li>
-        <li><a href="#events-section">Events</a></li>
-        <li><a href="#become-speaker-section">Become a Speaker</a></li>
-        <li><a href="#stories-section">Stories</a></li>
-        <li><a href="#sponsor-section">Become a Sponsor</a></li>
-        <li><a href="#archive-section">Photos & Videos</a></li>
-      </ul>
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-      </ul> -->
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</section>
-<!--/.Secondary Navbar -->
-
 <section class="masthead">
   <div class="container-fluid text-center">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="font-xxl mt-72 mb-32"><img src="https://imgee.s3.amazonaws.com/imgee/769dc463009d4cf09be7352c8c7b3628.png" alt="" width="80px;" class="animated bounceInDown">rootconf</h1>
-        <h2 class="font-m">Conference & Workshops on DevOps and Cloud Infrastructure</h2>
+        <h1 class="font-xxl mt-72 mb-32">Fragments</h1>
+        <h2 class="font-m">India's community of Android, iOS, and mobile web developers<br><small>(formerly called droidconIN)</small></h2>
       </div>
     </div>
   </div>
 </section>
 
-<section class="event-shoutout">
+<section>
   <div class="container">
-    <div class="row card-box-shadow event-shoutout-position">
-      <div class="col-md-10">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 card-box-shadow event-shoutout event-shoutout-position font-off-white">
         <div class="row">
-          <div class="col-md-6 col-sm-6 pl-0 pr-0">
-            <img src="http://via.placeholder.com/400x350" alt="" class="img-responsive">
+          <div class="col-md-2 col-sm-2 pl-0 pr-0 visible-lg-*">
+            <!-- <img src="http://via.placeholder.com/400x350" alt="" class="img-responsive"> -->
           </div>
-          <div class="col-md-6 col-sm-6 mt-32">
-            <p class="text-uppercase font-steelgrey">
-              Tickets now available for 2018 Conference
-            </p>
-            <h3 class="font-xl">rootconf 2018</h3>
+          <div class="col-md-10 col-sm-10 mt-32 mb-32">
+            <p class="text-uppercase">Tickets now available for 2017 Conference</p>
+            <h3 class="font-xl">Fragments 2017</h3>
+            <h2 class="font-m">12-13 Sept 2017, Bangalore</h2>
             <p class="font-s">This year's theme is service reliability. You will hear case studies of how organizations and teams plan, monitor and automate their infrastructure to ensure continous reliabilty and availability of services.</p>
-            <button class="mt-20 orange btn btn-l  font-m" role="button">rootconf 2018 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+            <a class="mt-20 orange btn btn-m font-m" href="/2017/">Fragments 2018 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -93,24 +48,23 @@
   </div>
 </section>
 
-<section class="about-community" id="overview-section">
+<!-- <section class="about-community" id="community">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <h2 class="mb-24">A growing community for DevOps</h2>
-                <p class="font-s">Conferences bring like-minded people under one umbrella. Insights bind participants and produce the sentiment of community. Our goal is to facilitate conversations and sharing of experiences that eventually lead to friendships which, in turn, foster community.</p>
-                <p class="font-s">Rootconf is an ongoing programme:<br>Join the #Rootconf community on Slack. Participate in the online (Ask Me Anything) AMA sessions. Contribute articles to the Rootconf blog. Propose topics for meetups. Speak at Rootconf meetups round the year. If you work on payments, participate in the DevOps and Payments conference in Mumbai, on July 8. Join our mailing list.</p>
+            <div class="col-md-6">
+                <h2 class="mb-24">A growing community of mobile developers</h2>
+                <p class="font-s">Conferences bring like-minded people under one umbrella. Insights bind participants and produce the sentiment of community. Our goal is to facilitate conversations and sharing of experiences.</p>
             </div>
-            <!-- <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-1">
                 <h4 class="text-uppercase font-steelgrey mt-24 mb-32 font-m">Join us online</h4>
                 <p class="font-s">We run a community Slack team where we have AMAs and discussions. You can also subscribe to our mailing list for updates.</p><br>
                 <p class="font-s text-decoration-underline">Join the #rootconf community on slack</p>
                 <p class="font-s text-decoration-underline">Join the mailing list</p>
-            </div> -->
+            </div>
         </div>
     </div>
-</section>
-<section class="join-us" id="community-section">
+</section> -->
+<!-- <section class="join-us" id="community-section">
     <div class="container mt-80">
         <div class="row">
            <div class="col-md-12">
@@ -119,31 +73,13 @@
            </div><hr>
         </div>
     </div>
-</section>
-<section class="attend-workshop">
+</section> -->
+<!-- <section class="attend-workshop">
     <div class="container mt-80">
         <div class="row">
             <div class="col-md-12" id="events-section">
-                <h2 class="mb-24">Rootconf Events</h2>
+                <h2 class="mb-24">Events</h2>
                 <div class="row">
-                    <!-- <div class="col-md-4 col-xs-12 mb-32">
-                        <div class="pt-24 mt-32 off-white" style="padding: 20px">
-                            <div>
-                                <span class="label label-default">Default</span>
-                                <span class="label label-primary">Primary</span>
-                                <span class="label label-success">Success</span>
-                                <span class="label label-info">Info</span>
-                            </div>
-                            <h2 class="font-m">STRONG by Zumba</h2>
-                            <p>May 11 2017, 11:00am</p>
-                            <hr>
-                            <p>STRONG is an intense functional training workout, boosted by powerful music. It is also called HITT (High Intensity Tempo Training). We use the help of rhythms and tempos to take us through a 60min workout of burpees, push ups, planks, squats and the works! A puddle of sweat around you is guaranteed!</p>
-                            <hr>
-                            <p>Workshop by<br><strong>Angelyn Rozario (@engelynn)</strong></p>
-                            <hr>
-                            <button class="mt-20 orange btn font-s" role="button">Attend <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
-                        </div>
-                    </div> -->
                     <div class="col-md-4 col-xs-12 mb-32">
                         <div class="meetup card">
                             <div class="card-heading">
@@ -247,7 +183,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="speak-at-event">
   <div class="container mt-80">
@@ -271,11 +207,10 @@
   </div>
 </section> -->
 
-<section>
-    <div class="container">
-        <div class="row mt-80 attendee-stories" id="stories-section">
+<!-- <section>
+    <div class="container mt-80">
+        <div class="row attendee-stories" id="stories-section">
              <div id="tcb-testimonial-carousel" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
@@ -314,7 +249,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Controls -->
                 <a class="left carousel-control background-none" href="#tcb-testimonial-carousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" style="margin-left: -60px;"></span> </a>
                 <a class="right carousel-control background-none" href="#tcb-testimonial-carousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" style="margin-right: -60px;"></span> </a>
              </div>
@@ -323,8 +257,8 @@
 </section>
 
 <section class="">
-    <div class="container">
-        <div class="row mt-80">
+    <div class="container mt-80">
+        <div class="row">
             <div class="col-md-4" id="sponsor-section">
                 <h2 class="mb-24">Our Sponsors</h2>
                 <p class="font-s">Our  sponsors are brands who are the best in the industry. We have a range of sponsorship options. Get a stall something something Insights bind participants and produce the sentiment of community. Our goal is to facilitate conversations and sharing of experiences that eventually lead to friendships which, in turn, foster community.</p>
@@ -371,7 +305,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="sponsor-an-event">
   <div class="container mt-80">
@@ -392,12 +326,12 @@
   </div>
 </section> -->
 
-<section class="archive" id="archive-section">
+<!-- <section class="archive" id="archive">
     <div class="container mt-80">
         <div class="row">
             <div class="col-md-4">
                 <h3>Photos</h3>
-                <a href="">
+                <a href="https://www.flickr.com/photos/hasgeek/albums">
                     <div class="image-overlay">
                         <img src="https://c1.staticflickr.com/5/4185/33827284114_3f1abb2e79_k.jpg" alt="Avatar" class="image img-responsive">
                         <div class="overlay">
@@ -409,7 +343,7 @@
             </div>
             <div class="col-md-4">
                 <h3>Videos</h3>
-                <a href="">
+                <a href="https://hasgeek.tv/droidconin/">
                     <div class="image-overlay">
                         <img src="https://c1.staticflickr.com/5/4181/34508119382_dce083ecd7_k.jpg" alt="Avatar" class="image img-responsive">
                         <div class="overlay">
@@ -458,75 +392,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section class="footer mt-80 off-white">
-    <div class="container">
-        <div class="row mt-48">
-            <div class="col-md-4">
-                <img src="https://hasgeek.com/static/img/hg-banner.png" alt="" width="53px"><br><br>
-                <p class="font-s">Rootconf is presented to you by <a href="">Hasgeek</a></p>
-                <p class="font-s">Copyright © 2010-2017</p>
-                <p class="font-s">All rights reserved</p>
-            </div>
-            <div class="col-md-3 mt-48 mb-48">
-                <a href=""><p class="display-inline"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 42px; color: #3b5998;"></i></p></a>
-                <a href=""><p class="display-inline ml-24"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size: 42px; color: #55acee;" ></i></p></a>
-            </div>
-            <div class="col-md-5">
-                <p class="text-uppercase font-steelgrey">
-                Subscribe to our newsletter
-                </p>
-                <form class="form-inline mt-24">
-                    <div class="form-group">
-                        <label for="exampleInputEmail2">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                        <button type="submit" class="dark-blue btn">Send invitation</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-
-        </div>
-    </div>
-</section>
-
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (700) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - $(".navbar").height()
-      }, 700, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-
-
-</body>
-</html>
+{% include footer.html %}

@@ -1,7 +1,9 @@
+---
+---
 @import 'base'; /* font sizes, font-weights, colors, media query breakpoints, */
 @import 'helper'; /* mixins for margin, padding */
 @import 'navbar'; /* styles for primary and secondary navbar */
 @import 'button'; /* styles for buttons should be here  */
 @import 'color'; /*  */
 @import 'typography'; /*  */
-@import 'rootconf'; /* styles pertaining to the rootconf main page only */
+@import 'main'; /* styles pertaining to the rootconf main page only */
