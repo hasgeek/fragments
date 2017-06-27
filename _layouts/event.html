@@ -35,12 +35,22 @@ layout: base
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
+        {% if page.overview %}
         <li><a href="#overview">Overview</a></li>
+        {% endif %}
         <!-- <li><a href="#schedule">Schedule</a></li> -->
-        <li><a href="#ticket">Tickets</a></li>
+        {% if page.boxoffice_item_collection %}
+        <li><a href="#tickets">Tickets</a></li>
+        {% endif %}
+        {% if page.funnel %}
         <li><a href="#speak">Call for Proposals</a></li>
-        <li><a href="#sponsor">Sponsor</a></li>
+        {% endif %}
+        {% if page.archive %}
         <li><a href="#archive">Photos &amp; Videos</a></li>
+        {% endif %}
+        {% if page.sponsor %}
+        <li><a href="#sponsor">Sponsors</a></li>
+        {% endif %}
         <li><a href="#hasgeek">About HasGeek</a></li>
       </ul>
       <!-- <ul class="nav navbar-nav navbar-right">
@@ -61,7 +71,12 @@ layout: base
             <h1 class="font-xxl mt-32">{{ page.title }}</h1>
             <h2 class="font-s">(formerly droidconIN)</h2>
             <h2 class="font-m">{{ page.datelocation }}</h2>
-            <a class="mt-20 orange btn btn-m font-m" href="{{ page.funnel }}">Propose a talk</a>
+            {% if page.boxoffice_item_collection %}
+            <a class="mt-20 orange btn btn-m font-m" href="#tickets">Buy Tickets</a>
+            {% endif %}
+            {% if page.funnel %}
+            <a class="mt-20 orange btn btn-m font-m" href="{{ page.funnel }}" target="_blank">Propose a talk</a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -69,29 +84,12 @@ layout: base
   </div>
 </section>
 
-<section class="about-community mt-32" id="overview">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="mb-24">What happened to droidconIN?</h2>
-                <p class="font-m">We've been organizing droidconIN since 2011 and while the mobile development landscape has been changing rapidly since, we have not. With the maturing of the mobile ecosystem, we are seeing more and more collaboration between mobile platform teams. The rise of cross platform frameworks and a drive for feature and design parity across platforms, teams need to understand the mobile app ecosystem as whole, not just Android or iOS.</p>
-                <p class="font-m">Building on this trend, we've decided to launch Fragments - a community and conference that covers the mobile ecosystem as a whole. Well cover topics across Android, iOS, and even advancements in the mobile web, such as Progressive Web Apps.</p>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-                <h4 class="text-uppercase font-steelgrey mt-24 mb-32 font-m">Past conferences</h4>
-                <p class="font-s">HasGeek produced droidconIN from 2011 to 2016.</p>
-                <p class="font-s"><a href="https://droidcon.in/2011">Droidcon India 2011</a></p>
-                <p class="font-s"><a href="https://droidcon.in/2012">Droidcon India 2012</a></p>
-                <p class="font-s"><a href="https://droidcon.in/2013">Droidcon India 2013</a></p>
-                <p class="font-s"><a href="https://droidcon.in/2014">Droidcon India 2014</a></p>
-                <p class="font-s"><a href="https://droidcon.in/2015">Droidcon India 2015</a></p>
-                <p class="font-s"><a href="https://droidcon.in/2016">droidconIN 2016</a></p>
-            </div>
-        </div>
-    </div>
-</section>
+{% if page.overview %}
+{{ page.overview }}
+{% endif %}
 
-<section class="about-community mt-32" id="speak">
+{% if page.funnel %}
+<section class="about-community mt-32 off-white" id="speak">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-6 col-md-offset-3">
@@ -102,13 +100,32 @@ layout: base
         </div>
     </div>
 </section>
+{% endif %}
 
-<section class="archive" id="archive">
+{% if page.boxoffice_item_collection %}
+<section class="about-tickets mt-32" id="tickets">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="mb-24">Tickets</h2>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div id="boxoffice-widget"><p class="text-center regular col-sm-8 col-sm-offset-2 col-xs-12">Loading...</p></div>
+  			  </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if page.archive %}
+<section class="archive off-white" id="archive">
     <div class="container mt-80">
         <div class="row">
             <div class="col-md-4">
                 <h3>Photos</h3>
-                <a href="https://www.flickr.com/photos/hasgeek/albums">
+                <a href="{{ page.archive.photos_url }}">
                     <div class="image-overlay">
                         <img src="https://c1.staticflickr.com/5/4185/33827284114_3f1abb2e79_k.jpg" alt="Avatar" class="image img-responsive">
                         <div class="overlay">
@@ -120,7 +137,7 @@ layout: base
             </div>
             <div class="col-md-4">
                 <h3>Videos</h3>
-                <a href="https://hasgeek.tv/droidconin/">
+                <a href="{{ page.archive.videos_url }}">
                     <div class="image-overlay">
                         <img src="https://c1.staticflickr.com/5/4181/34508119382_dce083ecd7_k.jpg" alt="Avatar" class="image img-responsive">
                         <div class="overlay">
@@ -132,5 +149,20 @@ layout: base
         </div>
     </div>
 </section>
+{% endif %}
+
+{% if page.sponsor %}
+<section class="about-community mt-32" id="sponsor">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="mb-24">Sponsors</h2>
+                <p class="font-m">Interesting in sponsoring {{ page.title }}?</p>
+                <a class="mt-20 orange btn btn-l font-m" href="{{ page.sponsor.sponsorship_deck_url }}" target="_blank">Sponsorship Deck</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 
 {% include footer.html %}

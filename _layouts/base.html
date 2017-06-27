@@ -12,6 +12,42 @@
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/bootstrap-horizon.css">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/animate.css">
+    {% if page.boxoffice_item_collection %}
+    <style type="text/css">
+      #boxoffice-widget .boxoffice-button-action {
+        background-color: #E05F26;
+        border-color:  #B94C1D;
+        color: #fff;
+      }
+      #boxoffice-widget .boxoffice-button-info {
+        background-color: #5BC0DE;
+        border-color: #2A9CBE;
+        color: #fff;
+      }
+      #boxoffice-widget .payment-stages-bg {
+        background-color: #3E50A3;
+      }
+      #boxoffice-widget .progress-indicator>li {
+        color: #fff;
+      }
+      #boxoffice-widget .progress-indicator>li.active {
+    	color: #fff;
+      }
+      #boxoffice-widget .category-heading {
+        background-color: #337ab7;
+        border-bottom: 3px solid #3e50a3;
+        color: #fff;
+        line-height: 1.1;
+      }
+      #boxoffice-widget .category-heading:after {
+        border-color: #337ab7 #fff #337ab7 #337ab7;
+      }
+      #boxoffice-widget .ticket-description ol {
+        list-style-position: inside;
+        padding-left: 20px;
+      }
+    </style>
+    {% endif %}
 </head>
 <body class="main font-black">
 
@@ -45,7 +81,59 @@
 //   });
 // });
 </script>
+{% if page.boxoffice_item_collection %}
+<script type="text/javascript">
+$(document).ready(function() {
 
+  var boxofficeUrl = "https://boxoffice.hasgeek.com";
+
+  $.get({
+    url: boxofficeUrl + "/api/1/boxoffice.js",
+    crossDomain: true,
+    timeout: 8000,
+    retries: 5,
+    retryInterval: 8000,
+    success: function(data) {
+      var boxofficeScript = document.createElement('script');
+      boxofficeScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);
+      window.setTimeout(function() {
+        window.Boxoffice.init({
+          org: "hasgeek",
+          itemCollection: "{{ page.boxoffice_item_collection }}",
+          paymentDesc: "{{ page.title }}"
+        });
+      }, 1000);
+    },
+    error: function(response) {
+      var ajaxLoad = this;
+      ajaxLoad.retries -= 1;
+      var errorMsg;
+      if (response.readyState === 4) {
+        errorMsg = "Server error, please try again later.";
+        $('#boxoffice-widget p').html(errorMsg);
+      }
+      else if (response.readyState === 0) {
+        if (ajaxLoad.retries < 0) {
+          if(!navigator.onLine) {
+            errorMsg = "Unable to connect. There is no network!";
+            $('#boxoffice-widget p').html(errorMsg);
+          }
+          else {
+            errorMsg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger), please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com .</p>";
+            $('#boxoffice-widget p').html(errorMsg);
+          }
+        } else {
+          setTimeout(function() {
+            $.get(ajaxLoad);
+          }, ajaxLoad.retryInterval);
+        }
+      }
+    }
+  });
+});
+</script>
+{% endif %}
 
 </body>
 </html>
