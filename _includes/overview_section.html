@@ -1,10 +1,27 @@
 <div class="container">
     <div class="row">
+      {% if include.left and include.right and include.center %}
+      <div class="col-md-4 font-m">
+          {{ include.left | markdownify }}
+      </div>
+      <div class="col-md-4 font-m">
+          {{ include.center | markdownify }}
+      </div>
+      <div class="col-md-4 font-m">
+          {{ include.right | markdownify }}
+      </div>
+      {% elsif include.left and include.right %}
         <div class="col-md-6 font-m">
-            {{ include.left | markdownify}}
+            {{ include.left | markdownify }}
         </div>
         <div class="col-md-5 col-md-offset-1 font-m">
             {{ include.right | markdownify }}
         </div>
+      {% elsif include.center %}
+        <div class="col-md-6 col-md-offset-3 font-m">
+            {{ include.center | markdownify }}
+        </div>
+      {% endif %}
+
     </div>
 </div>
