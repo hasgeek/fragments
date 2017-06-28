@@ -4,7 +4,6 @@ import urllib2
 import re
 import glob
 from behave import *
-from validation_rules import validate_event
 
 urlregex = re.compile(
     r'^(?:http)s?://' # http:// or https://
@@ -28,15 +27,16 @@ def step_impl(context):
         events = yaml.load_all(stream)
         for event in events:
             assert isinstance(event, dict), "event data must exist"
-            all_events.append(event)
+            all_events.append((f,event))
             break
 	context.events = all_events
 
 @then('all mandatory event fields must exist and be valid')
 def step_impl(context):
 
-    mandatory_fields = ['layout', 'title', 'datelocation']
-    for event in context.events:
+    mandatory_fields = ['layout', 'title', 'description', 'datelocation']
+    for f,event in context.events:
+        print ("Evaluating "+str(f))
         for field in mandatory_fields:
             assert event.get(field), "'"+field+"' value is missing"
 

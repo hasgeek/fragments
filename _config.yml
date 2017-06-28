@@ -29,12 +29,16 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Rakefile
   - .git
   - .sass_cache
   - _site
   - tests
 
 sass_dir: _sass
+
+liquid:
+  error_mode: strict
 
 collections:
   events:
