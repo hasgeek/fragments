@@ -1,17 +1,28 @@
 ---
 ---
+
+{% if page.description %}
+  {% assign description = page.description %}
+{% else %}
+  {% assign description = site.description %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Fragments</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="{{ description }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/bootstrap-horizon.css">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/animate.css">
+    {% if page.custom_css %}
+    <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/{{ page.custom_css }}">
+    {% endif %}
     {% if page.boxoffice_item_collection %}
       {% include boxoffice_styles.html %}
     {% endif %}

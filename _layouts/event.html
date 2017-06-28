@@ -82,7 +82,11 @@ layout: base
 </section>
 {% endif %}
 
+{% if page.sponsor.blurb %}
+{% assign sponsor_blurb = page.sponsor.blurb %}
+{% else %}
 {% capture sponsor_blurb %}Interested in sponsoring {{ page.title }}?{% endcapture %}
+{% endif %}
 {% if page.sponsor %}
 <section class="about-community mt-32" id="sponsor">
     {% include sponsor_section.html blurb=sponsor_blurb sponsorship_deck_url=page.sponsor.sponsorship_deck_url sponsors=page.sponsors %}
