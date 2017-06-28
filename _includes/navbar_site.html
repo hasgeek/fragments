@@ -1,0 +1,12 @@
+{% assign featured_events = site.events | where:'featured', 'true' %}
+
+<div class="container-fluid pl-0 pr-0">
+  <div class="primary-navbar">
+    <ul>
+      <li><a href="{{site.url}}{{site.baseurl}}/"><strong>{{ site.title }}</strong></a></li>
+      {% for event in featured_events %}
+        <li><a href="{{site.url}}{{site.baseurl}}{{ event.url }}">{{ event.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

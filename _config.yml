@@ -37,4 +37,4 @@ sass_dir: _sass
 collections:
   events:
     output: true
-    permalink: /:name
+    permalink: /:name/

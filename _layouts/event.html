@@ -3,16 +3,8 @@ layout: base
 ---
 
 <!-- Primary Navbar -->
-<section class="navbar mb-0 ">
-  <div class="container-fluid pl-0 pr-0">
-    <div class="primary-navbar">
-      <ul>
-        <li><a href="{{site.url}}{{site.baseurl}}/"><strong>Fragments</strong></a></li>
-        <li><a href="{{site.url}}{{site.baseurl}}/2017">2017 Conference</a></li>
-        <!-- <li class="pull-right"><a href="https://hasgeek.com/">HasGeek</a></li> -->
-      </ul>
-    </div>
-</div>
+<section class="mb-0">
+  {% include navbar_site.html %}
 </section>
 <!-- /.Primary Navbar -->
 
@@ -62,106 +54,38 @@ layout: base
 </section>
 <!--/.Secondary Navbar -->
 
-<section>
-  <div class="row mt-32">
-    <div class="col-md-offset-1 col-md-10 event-shoutout card-box-shadow font-off-white">
-      <div class="container-fluid text-center">
-        <div class="row">
-          <div class="col-md-12 mt-32 mb-32">
-            <h1 class="font-xxl mt-32">{{ page.title }}</h1>
-            <h2 class="font-s">(formerly droidconIN)</h2>
-            <h2 class="font-m">{{ page.datelocation }}</h2>
-            {% if page.boxoffice_item_collection %}
-            <a class="mt-20 orange btn btn-m font-m" href="#tickets">Buy Tickets</a>
-            {% endif %}
-            {% if page.funnel %}
-            <a class="mt-20 orange btn btn-m font-m" href="{{ page.funnel }}" target="_blank">Propose a talk</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="row mt-32">
+  {% include header_section.html %}
 </section>
 
 {% if page.overview %}
-{{ page.overview }}
+<section class="about-community mt-32" id="overview">
+  {% include overview_section.html left=page.overview.left_content right=page.overview.right_content %}
+</section>
 {% endif %}
 
 {% if page.funnel %}
 <section class="about-community mt-32 off-white" id="speak">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 class="mb-24">Call for Proposals</h2>
-                <p class="font-m">We are currently accepting talk proposal submissions</p>
-                <a class="mt-20 orange btn btn-l font-m" href="{{ page.funnel }}">Propose a talk</a>
-            </div>
-        </div>
-    </div>
+  {% include proposal_section.html %}
 </section>
 {% endif %}
 
 {% if page.boxoffice_item_collection %}
 <section class="about-tickets mt-32" id="tickets">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 class="mb-24">Tickets</h2>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <div id="boxoffice-widget"><p class="text-center regular col-sm-8 col-sm-offset-2 col-xs-12">Loading...</p></div>
-  			  </div>
-        </div>
-    </div>
+    {% include boxoffice_tickets_section.html %}
 </section>
 {% endif %}
 
 {% if page.archive %}
-<section class="archive off-white" id="archive">
-    <div class="container mt-80">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Photos</h3>
-                <a href="{{ page.archive.photos_url }}">
-                    <div class="image-overlay">
-                        <img src="https://c1.staticflickr.com/5/4185/33827284114_3f1abb2e79_k.jpg" alt="Avatar" class="image img-responsive">
-                        <div class="overlay">
-                            <div class="text"><i class="fa fa-camera" aria-hidden="true" style="font-size: 64px;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <h3>Videos</h3>
-                <a href="{{ page.archive.videos_url }}">
-                    <div class="image-overlay">
-                        <img src="https://c1.staticflickr.com/5/4181/34508119382_dce083ecd7_k.jpg" alt="Avatar" class="image img-responsive">
-                        <div class="overlay">
-                            <div class="text"><i class="fa fa-video-camera" aria-hidden="true" style="font-size: 64px;"></i></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+<section class="archive off-white mt-80" id="archive">
+  {% include archive_section.html photos_url=page.archive.photos_url videos_url=page.archive.videos_url %}
 </section>
 {% endif %}
 
+{% capture sponsor_blurb %}Interested in sponsoring {{ page.title }}?{% endcapture %}
 {% if page.sponsor %}
 <section class="about-community mt-32" id="sponsor">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-6 col-md-offset-3">
-                <h2 class="mb-24">Sponsors</h2>
-                <p class="font-m">Interesting in sponsoring {{ page.title }}?</p>
-                <a class="mt-20 orange btn btn-l font-m" href="{{ page.sponsor.sponsorship_deck_url }}" target="_blank">Sponsorship Deck</a>
-            </div>
-        </div>
-    </div>
+    {% include sponsor_section.html blurb=sponsor_blurb sponsorship_deck_url=page.sponsorship_deck_url %}
 </section>
 {% endif %}
 
