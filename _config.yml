@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Fragments
+subtitle: "India's community of Android, iOS, and mobile web developers<br>(formerly called droidconIN)"
 email: info@hasgeek.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -31,6 +32,10 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .git
+  - .sass_cache
+  - _site
+  - tests
 
 sass_dir: _sass
 

@@ -85,7 +85,7 @@ layout: base
 {% capture sponsor_blurb %}Interested in sponsoring {{ page.title }}?{% endcapture %}
 {% if page.sponsor %}
 <section class="about-community mt-32" id="sponsor">
-    {% include sponsor_section.html blurb=sponsor_blurb sponsorship_deck_url=page.sponsorship_deck_url %}
+    {% include sponsor_section.html blurb=sponsor_blurb sponsorship_deck_url=page.sponsor.sponsorship_deck_url sponsors=page.sponsors %}
 </section>
 {% endif %}
 
