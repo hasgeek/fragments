@@ -1,14 +1,26 @@
-<div class="card-box-shadow event-shoutout event-shoutout-position font-off-white">
-  <div class="pt-32 pb-32 pl-16 pr-16">
-    {% if include.event.boxoffice_item_collection %}
-    <p class="text-uppercase">Tickets now available for {{ include.event.title }}</p>
-    {% elsif include.event.funnel %}
-    <p class="text-uppercase">Call for Proposals are open for {{ include.event.title }}</p>
-    {% else %}
-    {% endif %}
-    <h3 class="font-xl">{{ include.event.title }}</h3>
-    <h2 class="font-m">{{ include.event.datelocation }}</h2>
-    <p class="font-s">{{ include.event.description }}</p>
-    <a class="mt-20 orange btn btn-m font-m" href="{{site.url}}{{site.baseurl}}{{ include.event.url }}">{{ include.event.title }}<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+<div class="card">
+  <header class="card-content">
+    <p class="title">
+      {{ include.event.title }}
+    </p>
+    <p class="subtitle is-6">
+      {{ include.event.datelocation }}
+    </p>
+    <span class="tag is-primary">
+      {% if include.event.boxoffice_item_collection %}
+      Tickets now available
+      {% elsif include.event.funnel %}
+      Call for Proposals are open
+      {% else %}
+      {% endif %}
+    </span>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      {{ include.event.description }}
+    </div>
   </div>
+  <footer class="card-footer">
+    <a class="card-footer-item" href="{{site.url}}{{site.baseurl}}{{ include.event.url }}">{{ include.event.title }}<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+  </footer>
 </div>

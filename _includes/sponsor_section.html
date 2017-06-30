@@ -1,4 +1,55 @@
-<div class="container">
+<section class="section "id="sponsor">
+  <div class="container">
+    <div class="has-text-centered">
+      <h1 class="title">Sponsors</h1>
+      <h2 class="subtitle">{{ include.blurb }}</h2>
+      <a class="button is-primary" href="{{ include.sponsorship_deck_url }}" target="_blank">Sponsorship Deck</a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+        {% if include.sponsors %}
+          {% for sponsor_type in include.sponsors %}
+          <div class="message has-text-centered">
+            <div class="message-body">
+              <h3 class="subtitle">{{ sponsor_type.title }}</h3>
+              <div class="columns is-multiline is-centered">
+                {% for sponsor in sponsor_type.sponsors %}
+                  <div class="column is-one-quarter">
+                    <figure class="image">
+                      <img src="{{ sponsor.logo_url }}" alt="{{ sponsor.title }}"style="cursor: pointer;max-height: 100px;width: auto;">
+                    </figure>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% endif %}
+  </div>
+</section>
+
+<!-- <img src="{{ include.sponsor.logo_url }}" data-toggle="modal" data-target="#{{ include.sponsor.title | slugify }}" alt="" style="cursor: pointer;margin-top:7px;max-height: 100px;width: auto;">
+<div class="modal fade text-left" id="{{ include.sponsor.title | slugify }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title"><img src="{{ include.sponsor.logo_url }}" width="260px"></h4>
+        <a href="{{ include.sponsor.url }}">{{ include.sponsor.display_url }}</a>
+      </div>
+      <div class="modal-body text-left">
+        {{ include.sponsor.blurb | markdownify }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
     <div class="row text-center">
         <div class="col-md-6 col-md-offset-3">
             <h2 class="mb-24">Sponsors</h2>
@@ -6,4 +57,16 @@
             <a class="mt-20 orange btn btn-l font-m" href="{{ include.sponsorship_deck_url }}" target="_blank">Sponsorship Deck</a>
         </div>
     </div>
-</div>
+    {% if include.sponsors %}
+      {% for sponsor_type in include.sponsors %}
+        <h3><span class="label label-default">{{ sponsor_type.title }}</span></h3>
+        <div class="row text-center">
+          {% for sponsor in sponsor_type.sponsors %}
+            <div class="col-md-3">
+                {% include sponsor_item.html sponsor=sponsor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% endif %}
+</div> -->

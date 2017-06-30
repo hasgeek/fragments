@@ -1,0 +1,78 @@
+---
+layout: base
+---
+
+<!-- Primary Navbar -->
+<section class="mb-0">
+  {% include navbar_site.html %}
+</section>
+<!-- /.Primary Navbar -->
+
+
+<!-- Secondary Navbar -->
+<section class="secondary-navbar nav-wrapper">
+  <nav class="navbar navbar-default mb-0 z-index-1" id="body" id="navbar-affix" data-spy="affix" data-offset-top="50">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{ page.title }}</a>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        {% if page.overview %}
+        <li><a href="#overview">Overview</a></li>
+        {% endif %}
+        <!-- <li><a href="#schedule">Schedule</a></li> -->
+        {% if page.boxoffice_item_collection %}
+        <li><a href="#tickets">Tickets</a></li>
+        {% endif %}
+        {% if page.sponsor %}
+        <li><a href="#sponsor">Sponsors</a></li>
+        {% endif %}
+        <li><a href="#hasgeek">About HasGeek</a></li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+<!--/.Secondary Navbar -->
+
+<section class="row mt-32">
+  {% include workshop_header_section.html event=page %}
+</section>
+
+{% if page.overview %}
+<section class="about-community mt-32" id="overview">
+  {% include overview_section.html left=page.overview.left_content right=page.overview.right_content center=page.overview.center_content %}
+</section>
+{% endif %}
+
+{% if page.boxoffice_item_collection %}
+<section class="about-tickets mt-32" id="tickets">
+    {% include boxoffice_tickets_section.html %}
+</section>
+{% endif %}
+
+{% if page.sponsor.blurb %}
+{% assign sponsor_blurb = page.sponsor.blurb %}
+{% else %}
+{% capture sponsor_blurb %}Interested in sponsoring {{ page.title }}?{% endcapture %}
+{% endif %}
+{% if page.sponsor %}
+<section class="about-community mt-32" id="sponsor">
+    {% include sponsor_section.html blurb=sponsor_blurb sponsorship_deck_url=page.sponsor.sponsorship_deck_url sponsors=page.sponsor.sponsors %}
+</section>
+{% endif %}
+
+{% include footer.html %}

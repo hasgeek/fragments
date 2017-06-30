@@ -1,0 +1,50 @@
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{ include.event.title }}
+      </h1>
+      {% if include.event.subtitle %}
+      <h2 class="subtitle">
+        {{ include.event.subtitle }}
+      </h2>
+      {% endif %}
+      <h3>{{ include.event.datelocation }}</h3>
+
+      <div class="block">
+        {% if include.event.boxoffice_item_collection %}
+        <a class="button is-primary" href="#tickets">Buy Tickets</a>
+        {% endif %}
+        {% if include.event.funnel %}
+        <a class="button" href="{{ include.event.funnel }}" target="_blank">Propose a talk</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- <div class="font-off-white">
+  <div class="col-md-offset-1 col-md-10 event-shoutout card-box-shadow">
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-12 mt-32 mb-32">
+          <h1 class="font-xxl mt-32">{{ include.event.title }}</h1>
+          {% if include.event.subtitle %}
+          <h2 class="font-s">{{ include.event.subtitle }}</h2>
+          {% endif %}
+          <h2 class="font-m">{{ include.event.datelocation }}</h2>
+          {% if include.event.boxoffice_item_collection %}
+          <a class="mt-20 orange btn btn-m font-m" href="#tickets">Buy Tickets</a>
+          {% endif %}
+          {% if include.event.funnel %}
+          <a class="mt-20 orange btn btn-m font-m" href="{{ include.event.funnel }}" target="_blank">Propose a talk</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

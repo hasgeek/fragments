@@ -1,12 +1,47 @@
-{% assign featured_events = site.events | where:'featured', 'true' %}
+{% assign all_events = site.collections | where:'type', 'event' | first %}
+{% assign featured_events = all_events.docs | where:'featured', 'true' %}
 
-<div class="container-fluid pl-0 pr-0">
-  <div class="primary-navbar">
-    <ul>
-      <li><a href="{{site.url}}{{site.baseurl}}/"><strong>{{ site.title }}</strong></a></li>
-      {% for event in featured_events %}
-        <li><a href="{{site.url}}{{site.baseurl}}{{ event.url }}">{{ event.title }}</a></li>
-      {% endfor %}
-    </ul>
+
+
+<nav class="nav has-shadow">
+  <div class="container">
+    <label class="nav-toggle" for="main-nav-toggle-state">
+     <span></span>
+     <span></span>
+     <span></span>
+   </label>
+    <!-- This checkbox is hidden -->
+    <input type="checkbox" class="nav-toggle-state" id="main-nav-toggle-state" />
+    <div class="nav-left">
+      <a class="nav-item is-hidden-mobile" href="{{site.url}}{{site.baseurl}}/" >
+        {{ site.title }}
+      </a>
+			{% for event in featured_events %}
+			  <a class="nav-item is-hidden-mobile" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
+			{% endfor %}
+    </div>
+    <div class="nav-right nav-menu">
+			{% for event in featured_events %}
+			  <a class="nav-item is-hidden-tablet" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
+			{% endfor %}
+    </div>
   </div>
+</nav>
+<!--
+
+
+<div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium" style="display: none;">
+		<button class="menu-icon" type="button" data-toggle></button>
+		<div class="title-bar-title">{{ site.title }}</div>
 </div>
+
+<div class="top-bar" id="site-menu">
+		<div class="top-bar-left">
+				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
+          <li><a href="{{site.url}}{{site.baseurl}}/"><strong>{{ site.title }}</strong></a></li>
+          {% for event in featured_events %}
+            <li><a href="{{site.url}}{{site.baseurl}}{{ event.url }}">{{ event.title }}</a></li>
+          {% endfor %}
+				</ul>
+		</div>
+</div> -->

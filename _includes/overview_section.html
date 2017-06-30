@@ -1,4 +1,29 @@
-<div class="container">
+<div class="columns">
+    {% if include.left %}
+    <div class="column">
+      <div class="content">
+        {{ include.left | markdownify }}
+      </div>
+    </div>
+    {% endif %}
+    {% if include.center %}
+    <div class="column">
+      <div class="content">
+        {{ include.center | markdownify }}
+      </div>
+    </div>
+    {% endif %}
+    {% if include.right %}
+    <div class="column">
+      <div class="content">
+        {{ include.right | markdownify }}
+      </div>
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- <div class="container">
     <div class="row">
       {% if include.left and include.right and include.center %}
       <div class="col-md-4 font-m">
@@ -24,4 +49,4 @@
       {% endif %}
 
     </div>
-</div>
+</div> -->
