@@ -12,6 +12,9 @@
    </label>
     <!-- This checkbox is hidden -->
     <input type="checkbox" class="nav-toggle-state" id="main-nav-toggle-state" />
+    <a class="nav-item is-hidden-tablet" href="{{site.url}}{{site.baseurl}}/" >
+      {{ site.title }}
+    </a>
     <div class="nav-left">
       <a class="nav-item is-hidden-mobile" href="{{site.url}}{{site.baseurl}}/" >
         {{ site.title }}
@@ -27,21 +30,3 @@
     </div>
   </div>
 </nav>
-<!--
-
-
-<div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium" style="display: none;">
-		<button class="menu-icon" type="button" data-toggle></button>
-		<div class="title-bar-title">{{ site.title }}</div>
-</div>
-
-<div class="top-bar" id="site-menu">
-		<div class="top-bar-left">
-				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
-          <li><a href="{{site.url}}{{site.baseurl}}/"><strong>{{ site.title }}</strong></a></li>
-          {% for event in featured_events %}
-            <li><a href="{{site.url}}{{site.baseurl}}{{ event.url }}">{{ event.title }}</a></li>
-          {% endfor %}
-				</ul>
-		</div>
-</div> -->

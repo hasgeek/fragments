@@ -4,11 +4,4 @@
 @import "bulma_material_variables";
 @import "bulma/bulma";
 @import "bulma_material_overrides";
-
-.nav-toggle-state {
-  display: none;
-}
-
-.nav-toggle-state:checked ~ .nav-menu {
-  display: block;
-}
+@import "navbar_dropdown"

@@ -37,6 +37,7 @@
   $(document).ready( function() {
 
     var stickyNav = $(".nav-sticky");
+    var navHeight;
     if (stickyNav.length > 0) {
       stuck = "nav-stuck";
       headerHeight = stickyNav[0].offsetTop;
@@ -52,6 +53,16 @@
         }
       });
     }
+    $("a").click(function (e) {
+      var goto = $(this).attr('data-href');
+      if (goto) {
+        // Prevent a page reload when a link is pressed
+        e.preventDefault();
+        // Scroll to section
+        var offset_top = $(goto).offset().top - navHeight || 0;
+        $("body,html").stop(true,true).animate({scrollTop:offset_top},300)
+      }
+    });
 
     {% if page.venue %}
       initLeaflets();
