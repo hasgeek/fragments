@@ -6,14 +6,14 @@
     <p class="subtitle is-6">
       {{ include.event.datelocation }}
     </p>
-    <span class="tag is-primary">
+
       {% if include.event.boxoffice_item_collection %}
-      Tickets now available
-      {% elsif include.event.funnel %}
-      Call for Proposals are open
-      {% else %}
+      <span class="tag is-primary">Tickets now available</span>
       {% endif %}
-    </span>
+      {% if include.event.funnel %}
+      <span class="tag is-success">Call for Proposals are open</span>
+      {% endif %}
+
   </header>
   <div class="card-content">
     <div class="content">

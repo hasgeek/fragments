@@ -21,12 +21,18 @@
     {% if page.boxoffice_item_collection %}
       {% include boxoffice_styles.html %}
     {% endif %}
+    {% if page.venue %}
+      <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/leaflet.css">
+    {% endif %}
 </head>
 <body class="main font-black">
 
   {{ content }}
 
 <script src="{{ site.url }}{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
+{% if page.venue %}
+  <script src="{{ site.url }}{{ site.baseurl }}/js/leaflet.js"></script>
+{% endif %}
 <script>
   $(document).ready( function() {
 
@@ -46,7 +52,19 @@
         }
       });
     }
+
+    {% if page.venue %}
+      initLeaflets();
+    {% endif %}
+
   })
+
+  function showModal(modalId) {
+    $('#'+modalId).addClass('is-active');
+  }
+  function hideModal(modalId) {
+    $('#'+modalId).removeClass('is-active');
+  }
 </script>
 {% if page.boxoffice_item_collection %}
   {% include boxoffice_js.html %}

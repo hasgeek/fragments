@@ -17,11 +17,14 @@ layout: base
       <a class="nav-item is-tab is-hidden-tablet" href="#overview">Overview</a>
       {% endif %}
       <!-- <li><a href="#schedule">Schedule</a></li> -->
+      {% if page.funnel %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#speak">Call for Proposals</a>
+      {% endif %}
       {% if page.boxoffice_item_collection %}
       <a class="nav-item is-tab is-hidden-tablet" href="#tickets">Tickets</a>
       {% endif %}
-      {% if page.funnel %}
-      <a class="nav-item is-tab is-hidden-tablet" href="#speak">Call for Proposals</a>
+      {% if page.venue %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#venue">Venue</a>
       {% endif %}
       {% if page.archive %}
       <a class="nav-item is-tab is-hidden-tablet" href="#archive">Photos &amp; Videos</a>
@@ -36,11 +39,14 @@ layout: base
       <a class="nav-item is-tab is-hidden-mobile" href="#overview">Overview</a>
       {% endif %}
       <!-- <li><a href="#schedule">Schedule</a></li> -->
+      {% if page.funnel %}
+      <a class="nav-item is-tab is-hidden-mobile" href="#speak">Call for Proposals</a>
+      {% endif %}
       {% if page.boxoffice_item_collection %}
       <a class="nav-item is-tab is-hidden-mobile" href="#tickets">Tickets</a>
       {% endif %}
-      {% if page.funnel %}
-      <a class="nav-item is-tab is-hidden-mobile" href="#speak">Call for Proposals</a>
+      {% if page.venue %}
+      <a class="nav-item is-tab is-hidden-mobile" href="#venue">Venue</a>
       {% endif %}
       {% if page.archive %}
       <a class="nav-item is-tab is-hidden-mobile" href="#archive">Photos &amp; Videos</a>
@@ -76,6 +82,14 @@ layout: base
 <section class="section "id="tickets">
   <div class="container">
     {% include boxoffice_tickets_section.html %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.venue %}
+<section class="section "id="venue">
+  <div class="container">
+    {% include venue_section.html venue=page.venue %}
   </div>
 </section>
 {% endif %}
