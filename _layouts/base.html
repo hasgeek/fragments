@@ -41,14 +41,14 @@
     if (stickyNav.length > 0) {
       stuck = "nav-stuck";
       headerHeight = stickyNav[0].offsetTop;
-      nextSibling = stickyNav.next()[0];
+      nextSibling = stickyNav.parent().next()[0];
       navHeight = stickyNav[0].clientHeight;
       $(window).scroll(function() {
         if( $(this).scrollTop() > headerHeight ) {
-          stickyNav.addClass(stuck);
+          stickyNav.parent().addClass(stuck);
           nextSibling.style.marginTop = navHeight+"px";
         } else {
-          stickyNav.removeClass(stuck);
+          stickyNav.parent().removeClass(stuck);
           nextSibling.style.marginTop = 0;
         }
       });
