@@ -27,9 +27,26 @@
   {{ content }}
 
 <script src="{{ site.url }}{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/js/foundation.min.js"></script>
 <script>
-  $(document).foundation();
+  $(document).ready( function() {
+
+    var stickyNav = $(".nav-sticky");
+    if (stickyNav.length > 0) {
+      stuck = "nav-stuck";
+      headerHeight = stickyNav[0].offsetTop;
+      nextSibling = stickyNav.next()[0];
+      navHeight = stickyNav[0].clientHeight;
+      $(window).scroll(function() {
+        if( $(this).scrollTop() > headerHeight ) {
+          stickyNav.addClass(stuck);
+          nextSibling.style.marginTop = navHeight+"px";
+        } else {
+          stickyNav.removeClass(stuck);
+          nextSibling.style.marginTop = 0;
+        }
+      });
+    }
+  })
 </script>
 {% if page.boxoffice_item_collection %}
   {% include boxoffice_js.html %}

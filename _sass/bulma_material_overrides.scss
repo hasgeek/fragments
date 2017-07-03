@@ -294,6 +294,16 @@ hr {
   .nav-menu {
     background-color: $primary;
   }
+
+  .nav-left, .nav-right, .nav-center {
+    overflow: auto;
+  }
+}
+
+.nav-stuck {
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .tabs {

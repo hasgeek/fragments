@@ -7,17 +7,29 @@ layout: base
 <!-- /.Primary Navbar -->
 
 
-
-<section class="row mt-32">
   {% include event_header_section.html event=page %}
-</section>
 
 
-<nav class="nav has-shadow">
+<nav class="nav has-shadow nav-sticky">
   <div class="container">
-    <!-- This checkbox is hidden -->
-    <input type="checkbox" class="nav-toggle-state" id="sub-nav-toggle-state"  />
     <div class="nav-left">
+      {% if page.overview %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#overview">Overview</a>
+      {% endif %}
+      <!-- <li><a href="#schedule">Schedule</a></li> -->
+      {% if page.boxoffice_item_collection %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#tickets">Tickets</a>
+      {% endif %}
+      {% if page.funnel %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#speak">Call for Proposals</a>
+      {% endif %}
+      {% if page.archive %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#archive">Photos &amp; Videos</a>
+      {% endif %}
+      {% if page.sponsor %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#sponsor">Sponsors</a>
+      {% endif %}
+      <a class="nav-item is-tab is-hidden-tablet" href="#hasgeek">About HasGeek</a>
     </div>
     <div class="nav-center">
       {% if page.overview %}
@@ -38,68 +50,11 @@ layout: base
       {% endif %}
       <a class="nav-item is-tab is-hidden-mobile" href="#hasgeek">About HasGeek</a>
     </div>
-    <div class="nav-right nav-menu">
-      {% if page.overview %}
-      <a class="nav-item is-tab is-hidden-tablet" href="#overview">Overview</a>
-      {% endif %}
-      <!-- <li><a href="#schedule">Schedule</a></li> -->
-      {% if page.boxoffice_item_collection %}
-      <a class="nav-item is-tab is-hidden-tablet" href="#tickets">Tickets</a>
-      {% endif %}
-      {% if page.funnel %}
-      <a class="nav-item is-tab is-hidden-tablet is-active" href="#speak">Call for Proposals</a>
-      {% endif %}
-      {% if page.archive %}
-      <a class="nav-item is-tab is-hidden-tablet is-active" href="#archive">Photos &amp; Videos</a>
-      {% endif %}
-      {% if page.sponsor %}
-      <a class="nav-item is-tab is-hidden-tablet is-active" href="#sponsor">Sponsors</a>
-      {% endif %}
-      <a class="nav-item is-tab is-hidden-tablet is-active" href="#hasgeek">About HasGeek</a>
-    </div>
-    <label class="nav-toggle" for="sub-nav-toggle-state">
-     <span></span>
-     <span></span>
-     <span></span>
-   </label>
+    <div class="nav-right">
 
+    </div>
   </div>
 </nav>
-
-
-
-<!-- Secondary Navbar -->
-<section class="secondary-navbar nav-wrapper">
-  <!-- <div class="title-bar" data-responsive-toggle="page-menu" data-hide-for="medium" style="display: none;">
-  		<button class="menu-icon" type="button" data-toggle></button>
-  		<div class="title-bar-title">{{ page.title }}</div>
-  </div> -->
-
-  <!-- <div class="top-bar" id="page-menu">
-  		<div class="top-bar-left">
-  				<ul class="medium-horizontal vertical dropdown menu" >
-            {% if page.overview %}
-            <li><a href="#overview">Overview</a></li>
-            {% endif %}
-            <li><a href="#schedule">Schedule</a></li>
-            {% if page.boxoffice_item_collection %}
-            <li><a href="#tickets">Tickets</a></li>
-            {% endif %}
-            {% if page.funnel %}
-            <li><a href="#speak">Call for Proposals</a></li>
-            {% endif %}
-            {% if page.archive %}
-            <li><a href="#archive">Photos &amp; Videos</a></li>
-            {% endif %}
-            {% if page.sponsor %}
-            <li><a href="#sponsor">Sponsors</a></li>
-            {% endif %}
-            <li><a href="#hasgeek">About HasGeek</a></li>
-  				</ul>
-  		</div>
-  </div> -->
-</section>
-<!--/.Secondary Navbar -->
 
 {% if page.overview %}
 <section class="section "id="overview">
