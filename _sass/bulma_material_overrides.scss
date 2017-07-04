@@ -195,6 +195,14 @@ hr {
     text-transform: uppercase;
     font-weight: 500;
   }
+
+  &.is-clickable {
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $shadow-large;
+    }
+  }
 }
 
 .menu {
