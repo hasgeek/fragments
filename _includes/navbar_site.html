@@ -9,9 +9,6 @@
       {{ site.title }}
     </a>
     <div class="nav-left">
-      <a class="nav-item" href="{{site.url}}{{site.baseurl}}/" >
-        {{ site.title }}
-      </a>
 			{% for event in featured_events %}
 			  <a class="nav-item" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
 			{% endfor %}

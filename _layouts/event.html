@@ -15,14 +15,14 @@ layout: base
 <div style="z-index:10;">
   <nav class="nav has-shadow nav-sticky" style="z-index:10;">
     <div class="container">
-      <span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
       <div class="nav-left" style="z-index:10;">
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
         {% if page.overview %}
-        <a class="nav-item is-tab is-hidden-tablet" data-href="#overview">Overview</a>
+        <a class="nav-item is-tab is-hidden-tablet" data-href="#overview" style="z-index:10;">Overview</a>
         {% endif %}
         <!-- <li><a href="#schedule">Schedule</a></li> -->
         {% if page.funnel %}
