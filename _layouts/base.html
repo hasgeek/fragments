@@ -134,7 +134,9 @@
   {% include boxoffice_js.html %}
 {% endif %}
 
+{% if jekyll.environment == 'production '%}
 {% include analytics.html ga_tracking_code=site.ga_tracking_code %}
+{% endif %}
 
 </body>
 </html>
