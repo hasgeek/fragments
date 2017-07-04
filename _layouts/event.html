@@ -13,14 +13,14 @@ layout: base
 
 
 <div style="z-index:10;">
-  <nav class="nav has-shadow nav-sticky">
+  <nav class="nav has-shadow nav-sticky" style="z-index:10;">
     <div class="container">
       <span class="nav-toggle">
         <span></span>
         <span></span>
         <span></span>
       </span>
-      <div class="nav-left">
+      <div class="nav-left" style="z-index:10;">
         {% if page.overview %}
         <a class="nav-item is-tab is-hidden-tablet" data-href="#overview">Overview</a>
         {% endif %}
@@ -42,7 +42,7 @@ layout: base
         {% endif %}
         <a class="nav-item is-tab is-hidden-tablet" data-href="#hasgeek">About HasGeek</a>
       </div>
-      <div class="nav-center">
+      <div class="nav-center" style="z-index:10;">
         {% if page.overview %}
         <a class="nav-item is-tab is-hidden-mobile" data-href="#overview">Overview</a>
         {% endif %}
