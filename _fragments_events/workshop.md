@@ -6,7 +6,6 @@ subtitle: A beginner workshop on Android
 datelocation: "12-13 Sept 2017, Bangalore"
 description: "TA beginner workshop on Android"
 funnel: "https://fragments.talkfunnel.com/2017/"
-boxoffice_item_collection: ''
 archive:
   photos_url: https://www.flickr.com/photos/hasgeek/albums
   videos_url: https://hasgeek.tv/droidconin/

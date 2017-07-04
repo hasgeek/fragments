@@ -21,7 +21,7 @@
                       <img src="{{ sponsor.logo_url }}" alt="{{ sponsor.title }}"style="cursor: pointer;max-height: 100px;width: auto;" onclick="showModal('sponsor-{{ include.sponsor.title | slugify }}')">
                     </figure>
                   </div>
-                  <div class="modal" id="sponsor-{{ include.sponsor.title | slugify }}">
+                  <div class="modal" id="sponsor-{{ include.sponsor.title | slugify }}" style="z-index:20;">
                     <div class="modal-background"></div>
                     <div class="modal-content">
                       <div class="box">

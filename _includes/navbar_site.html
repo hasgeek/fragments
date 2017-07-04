@@ -3,29 +3,17 @@
 
 
 
-<nav class="nav has-shadow">
+<nav class="nav has-shadow is-hidden-mobile">
   <div class="container">
-    <label class="nav-toggle" for="main-nav-toggle-state">
-     <span></span>
-     <span></span>
-     <span></span>
-   </label>
-    <!-- This checkbox is hidden -->
-    <input type="checkbox" class="nav-toggle-state" id="main-nav-toggle-state" />
-    <a class="nav-item is-hidden-tablet" href="{{site.url}}{{site.baseurl}}/" >
+    <a class="nav-item" href="{{site.url}}{{site.baseurl}}/" >
       {{ site.title }}
     </a>
     <div class="nav-left">
-      <a class="nav-item is-hidden-mobile" href="{{site.url}}{{site.baseurl}}/" >
+      <a class="nav-item" href="{{site.url}}{{site.baseurl}}/" >
         {{ site.title }}
       </a>
 			{% for event in featured_events %}
-			  <a class="nav-item is-hidden-mobile" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
-			{% endfor %}
-    </div>
-    <div class="nav-right nav-menu">
-			{% for event in featured_events %}
-			  <a class="nav-item is-hidden-tablet" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
+			  <a class="nav-item" href="{{site.url}}{{site.baseurl}}{{ event.url }}" >{{ event.title }}</a>
 			{% endfor %}
     </div>
   </div>

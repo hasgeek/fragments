@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fragments</title>
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="{{ description }}">
     <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css">
     {% if page.custom_css %}
@@ -24,12 +24,17 @@
     {% if page.venue %}
       <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/leaflet.css">
     {% endif %}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
 </head>
 <body class="main font-black">
+  {% include sidebar_site.html %}
+
+  {% include navbar_site.html %}
 
   {{ content }}
 
-<script src="{{ site.url }}{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
+  <script src="{{ site.url }}{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
 {% if page.venue %}
   <script src="{{ site.url }}{{ site.baseurl }}/js/leaflet.js"></script>
 {% endif %}
@@ -40,11 +45,11 @@
     var navHeight;
     if (stickyNav.length > 0) {
       stuck = "nav-stuck";
-      headerHeight = stickyNav[0].offsetTop;
+      headerHeight = $(stickyNav[0]).offset().top;
       nextSibling = stickyNav.parent().next()[0];
       navHeight = stickyNav[0].clientHeight;
       $(window).scroll(function() {
-        if( $(this).scrollTop() > headerHeight ) {
+        if( $(this).scrollTop() > headerHeight - navHeight) {
           stickyNav.parent().addClass(stuck);
           nextSibling.style.marginTop = navHeight+"px";
         } else {
@@ -68,6 +73,16 @@
       initLeaflets();
     {% endif %}
 
+    $('.nav-toggle').sidr({
+      name: 'sidebar',
+      source: '#sidebar',
+      renaming: false
+    });
+
+    // Toggle button
+      // document.querySelector('.nav-toggle').addEventListener('click', function() {
+      //   slideout.toggle();
+      // });
   })
 
   function showModal(modalId) {
